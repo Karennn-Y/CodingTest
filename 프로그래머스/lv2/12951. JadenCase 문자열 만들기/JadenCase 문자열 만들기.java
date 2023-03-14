@@ -1,28 +1,19 @@
 class Solution {
     public String solution(String s) {
-        String[] a = s.toLowerCase().split(" ");
+        StringBuilder answer = new StringBuilder();
+        String[] words = s.toLowerCase().split(" ");
 
-		StringBuilder sb = new StringBuilder();
+        for (String word : words) {
+            if (word.isEmpty()) {
+                answer.append(" ");
+                continue;
+            }
+            answer.append(word.substring(0, 1).toUpperCase()).append(word.substring(1)).append(" ");
 
-		for (int i = 0; i < a.length; i++) {
-			if (a[i].isEmpty()) {
-				sb.append(" ");
-				continue;
-			} else {
-				sb.append(a[i].toUpperCase().charAt(0));
-				for (int j = 1; j < a[i].length(); j++) {
-					sb.append(a[i].charAt(j));
-				}
-			}
-			if (i != a.length - 1) {
-				sb.append(" ");
-			}
-		}
-        
-        if (s.substring(s.length() - 1, s.length()).equals(" ")) {
-			sb.append(" ");
-		}
-		
-        return sb.toString();
+        }
+        if (s.charAt(s.length() - 1) == ' ') {
+            return answer.toString();
+        }
+        return answer.toString().trim();
     }
 }
