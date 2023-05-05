@@ -5,7 +5,7 @@ class Solution {
         int sum = 0;
         int count = 0;
 
-        while (s.length() != 1) {
+        while (!s.equals("1")) {
             number = s.replace("0", "").length();
             sum += (s.length() - number);
             s = Integer.toBinaryString(number);
