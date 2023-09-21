@@ -1,9 +1,5 @@
-import java.util.Arrays;
-
 class Solution {
     public int[] solution(int[] lottos, int[] win_nums) {
-        Arrays.sort(lottos);
-        Arrays.sort(win_nums);
         int zero_cnt = 0, cnt = 0;
 
         for (int lotto : lottos) {
