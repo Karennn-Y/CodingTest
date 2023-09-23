@@ -1,6 +1,6 @@
 class Solution {
     public String solution(String X, String Y) {
-                int[] xArr=new int[10];
+        int[] xArr=new int[10];
         int[] yArr=new int[10];
         for (int i=0; i<X.length(); i++){
             xArr[(int)(X.charAt(i)-'0')]++;
