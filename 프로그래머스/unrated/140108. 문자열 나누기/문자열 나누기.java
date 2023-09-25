@@ -10,7 +10,6 @@ class Solution {
         int different = 0;
         for (int i = 1; i < arr.length; i++) {
             if (same == different) {
-                //System.out.println(s.substring(idx, i));
                 words.add(s.substring(idx, i));
                 x = arr[i];
                 idx = i;
