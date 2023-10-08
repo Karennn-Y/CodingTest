@@ -13,8 +13,7 @@ class Solution {
                 arr[idx2++] = array[j];
             }
             Arrays.sort(arr);
-            answer[idx] = arr[command[2] - 1];
-            idx++;
+            answer[idx++] = arr[command[2] - 1];
         }
         return answer;
     }
