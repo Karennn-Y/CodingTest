@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 class Solution {
-    public int[] solution(int[] numbers) {
+    public ArrayList<Integer> solution(int[] numbers) {
         ArrayList<Integer> sums = new ArrayList<>();
 
         for (int i = 0; i < numbers.length; i++) {
@@ -13,6 +13,6 @@ class Solution {
             }
         }
         Collections.sort(sums);
-        return sums.stream().mapToInt(i -> i).toArray();
+        return sums;
     }
 }
