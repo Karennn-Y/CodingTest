@@ -4,19 +4,17 @@ class Solution {
     public int[] solution(int l, int r) {
         ArrayList<Integer> list = new ArrayList<>();
         
-        for (int i = l; i <= r; i++) {
+        main : for (int i = l; i <= r; i++) {
             String s = "";
             int cnt = 0;
             if (i % 5 == 0) {
                 s = Integer.toString(i);
                 for (int j = 0; j < s.length(); j++) {
                     if (s.charAt(j) != '0' && s.charAt(j) != '5') {
-                        cnt++;
-                        break;
+                        continue main;
                     }
                 }
-                if (cnt == 0)
-                    list.add(i);
+                list.add(i);
             }
         }
         
