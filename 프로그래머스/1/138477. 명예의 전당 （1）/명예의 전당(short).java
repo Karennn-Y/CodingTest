@@ -1,4 +1,4 @@
-public static int[] solution (int[] score, int k) {
+public int[] solution (int[] score, int k) {
         int[] answer = new int[score.length];
         ArrayList<Integer> fame = new ArrayList<>();
 
@@ -11,4 +11,4 @@ public static int[] solution (int[] score, int k) {
             answer[i] = fame.get(0);
         }
         return answer;
-    }
+}
