@@ -5,7 +5,9 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         
         ArrayList<Integer> numbers = new ArrayList<>();
-        for (String str : s.split(" "))
+        String[] nums = s.split(" ");
+        
+        for (String str : nums)
             numbers.add(Integer.parseInt(str));
             
         Collections.sort(numbers);
