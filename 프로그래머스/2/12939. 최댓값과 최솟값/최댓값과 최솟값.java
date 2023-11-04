@@ -10,8 +10,8 @@ class Solution {
             
         Collections.sort(numbers);
         
-        return sb.append(numbers.get(0))
+        return sb.append(Integer.toString(numbers.get(0)))
                      .append(" ")
-                     .append(numbers.get(numbers.size() - 1)).toString();
+                     .append(Integer.toString(numbers.get(numbers.size() - 1))).toString();
     }
 }
