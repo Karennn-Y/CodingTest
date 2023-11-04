@@ -12,10 +12,8 @@ class Solution {
             
         Collections.sort(numbers);
         
-        sb.append(Integer.toString(numbers.get(0)))
+        return sb.append(Integer.toString(numbers.get(0)))
                      .append(" ")
-                     .append(Integer.toString(numbers.get(numbers.size() - 1)));
-        
-        return sb.toString();
+                     .append(Integer.toString(numbers.get(numbers.size() - 1))).toString();
     }
 }
