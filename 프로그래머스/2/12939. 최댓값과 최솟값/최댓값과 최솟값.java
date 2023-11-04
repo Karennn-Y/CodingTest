@@ -1,16 +1,17 @@
-import java.util.Arrays;
-import java.util.stream.Stream;
+import java.util.*;
 
 class Solution {
     public String solution(String s) {
-        String answer = "";
-
-        int[] splits = Stream.of(s.split(" "))
-            .mapToInt(Integer::parseInt).toArray();
+        StringBuilder sb = new StringBuilder();
         
-        Arrays.sort(splits);
-
-        answer = String.valueOf(splits[0]) + " " + String.valueOf(splits[splits.length - 1]);
-        return answer;
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (String str : s.split(" "))
+            numbers.add(Integer.parseInt(str));
+            
+        Collections.sort(numbers);
+        
+        return sb.append(numbers.get(0))
+                     .append(" ")
+                     .append(numbers.get(numbers.size() - 1)).toString();
     }
 }
