@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 class Solution {
@@ -9,7 +10,9 @@ class Solution {
         }
         numberString.sort(((o1, o2) -> (o2 + o1).compareTo(o1 + o2)));
         if(numberString.get(0).equals("0")) return "0";
-        return String.join("", numberString);
+        StringBuilder sb = new StringBuilder();
+        for (String num : numberString)
+            sb.append(num);
+        return sb.toString();
     }
-
 }
