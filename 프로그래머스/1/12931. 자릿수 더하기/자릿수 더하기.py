@@ -1,6 +1,5 @@
 def solution(n):
-    arr = str(n)
     answer = 0
-    for i in arr:
+    for i in str(n):
         answer += int(i)
     return answer
