@@ -4,6 +4,9 @@ import java.util.*;
 public class Main {
     static int safeCnt = Integer.MIN_VALUE;
     static int[][] map;
+    static int[] xDirection = {0, 0, 1, -1};
+    static int[] yDirection = {1, -1, 0, 0};
+    
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String[] line = bf.readLine().split(" ");
@@ -57,27 +60,9 @@ public class Main {
             Virus v = q.poll();
 
             for (int i = 0; i < 4; i++) {
-                int x = 0;
-                int y = 0;
+                int x = v.x + xDirection[i];
+                int y = v.y + yDirection[i];
 
-                switch (i) {
-                    case 0 :
-                        x = v.x - 1;
-                        y = v.y;
-                        break;
-                    case 1 :
-                        x = v.x + 1;
-                        y = v.y;
-                        break;
-                    case 2 :
-                        x = v.x;
-                        y = v.y - 1;
-                        break;
-                    case 3 :
-                        x = v.x;
-                        y = v.y + 1;
-                        break;
-                }
                 if (x >= 0 && x < map.length && y >= 0 && y < map[0].length) {
                     if (copyMap[x][y] == 0) {
                         q.add(new Virus(x, y));
