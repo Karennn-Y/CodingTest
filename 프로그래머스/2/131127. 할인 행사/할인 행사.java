@@ -19,7 +19,7 @@ class Solution {
             boolean flag = true;
             
             for (String key : wishList.keySet()) {
-                if (wishList.get(key) != saleList.get(key)) {
+                if (!Objects.equals(wishList.get(key), saleList.get(key))) {
                     flag = false;
                     break;
                 }
